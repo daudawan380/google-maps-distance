@@ -1,0 +1,9 @@
+<input type="text" placeholder="Enter starting point" #startInput (input)="onInputChange($event, 'start')">
+<input type="text" placeholder="Enter destination" #destinationInput (input)="onInputChange($event, 'destination')">
+<button (click)="calculateDistance()">Calculate Distance</button>
+
+<div #map style="height: 400px;"></div>
+
+<div *ngIf="distance">
+  <p>Distance: {{ distance }}</p>
+</div>
